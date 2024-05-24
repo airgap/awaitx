@@ -1,0 +1,38 @@
+{
+  "name": "awaitx",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Async TSX with less boilerplate",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf node_modules dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier -w ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airgap/awaitx.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/airgap/awaitx/issues"
+  },
+  "homepage": "https://github.com/airgap/awaitx#readme",
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier-eslint-cli": "^8.0.1",
+    "typescript": "^5.0.0",
+    "use-future": "^0.0.2"
+  },
+  "files": [
+    "dist"
+  ]
+}
