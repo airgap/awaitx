@@ -76,7 +76,7 @@ The `<Await>` component takes the following props:
 
 If the `dependencies` prop is not provided to the `<Await>` component, it is treated as an empty array `[]`. This means that the promise will only be evaluated once when the component mounts, and it won't be re-evaluated unless the component is unmounted and mounted again.
 
-If you want the promise to be re-evaluated whenever certain dependencies change, make sure to provide an array of those dependencies as the `dependencies` prop. This behavior is similar to how the `useEffect` hook works in React.
+If you want the promise to be re-evaluated whenever certain dependencies change, make sure to provide an array of those dependencies as the `dependencies` prop.
 
 ### Benefits
 
