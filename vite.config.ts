@@ -7,7 +7,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "AwaitX",
-      fileName: "index.js",
+      fileName: "index",
     },
     rollupOptions: {
       external: ["react", "react-dom"],
