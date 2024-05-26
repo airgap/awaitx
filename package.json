@@ -1,6 +1,6 @@
 {
   "name": "awaitx",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "description": "Async TSX with less boilerplate",
   "main": "dist/index.js",
