@@ -67,16 +67,10 @@ export const HotPosts = () => (
 The `<Await>` component takes the following props:
 
 - `source`: A function that returns a promise. This is the promise that will be awaited.
-- `dependencies` (optional): An array of dependencies for the `useFuture` hook, similar to the dependencies array in `useEffect`. It determines when the promise should be re-evaluated. If not provided, it is treated as an empty array.
+- `dependencies`: An array of dependencies for the `useFuture` hook, similar to the dependencies array in `useEffect`. It determines when the promise should be re-evaluated. **If not provided, it is treated as an empty array to prevent excessive reevaluation.**
 - `then`: A render prop that receives the resolved value of the promise and returns the JSX to render when the promise is fulfilled.
 - `fail`: A render prop that receives the error value if the promise is rejected and returns the JSX to render in case of an error.
 - `meanwhile`: The JSX to render while the promise is pending.
-
-### Missing Dependencies
-
-If the `dependencies` prop is not provided to the `<Await>` component, it is treated as an empty array `[]`. This means that the promise will only be evaluated once when the component mounts, and it won't be re-evaluated unless the component is unmounted and mounted again.
-
-If you want the promise to be re-evaluated whenever certain dependencies change, make sure to provide an array of those dependencies as the `dependencies` prop.
 
 ### Benefits
 
@@ -85,7 +79,7 @@ Using `awaitx` provides several benefits:
 - It simplifies the code by eliminating the need for explicit state management and effects.
 - It makes the code more declarative and readable by clearly separating the loading, success, and error states.
 - It reduces the chances of errors and inconsistencies in handling promise states.
-- It allows you to specify dependencies to control when the promise should be re-evaluated.
+- It will only reevaluate the promise when a dependency list is provided.
 
 ## Contributing
 
