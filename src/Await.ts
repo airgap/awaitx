@@ -10,7 +10,7 @@ export const Await = <T>({
   catchall,
 }: {
   source: () => Promise<T>;
-  dependencies: DependencyList;
+  dependencies?: DependencyList;
   then?: (value: T) => ReactNode;
   fail?: (error: unknown) => ReactNode;
   meanwhile?: ReactNode;
