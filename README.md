@@ -34,7 +34,8 @@ export const HotPosts = () => {
     if (fetchingPosts || posts || error) return;
 
     setFetchingPosts(true);
-    api.listHotPosts({})
+    api
+      .listHotPosts({})
       .then(setPosts)
       .catch(setError)
       .finally(() => setFetchingPosts(false));
@@ -56,8 +57,8 @@ After using `awaitx`:
 export const HotPosts = () => (
   <Await
     source={() => api.listHotPosts({})}
-    then={posts => <PostList posts={posts} />}
-    fail={error => <h3>{String(error)}</h3>}
+    then={(posts) => <PostList posts={posts} />}
+    fail={(error) => <h3>{String(error)}</h3>}
     meanwhile={<>Loading posts...</>}
   />
 );
