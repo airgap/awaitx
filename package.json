@@ -1,6 +1,6 @@
 {
   "name": "awaitx",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "description": "Async TSX with less boilerplate",
   "main": "dist/index.js",
@@ -33,7 +33,7 @@
     "jsdom": "^24.0.0",
     "prettier-eslint-cli": "^8.0.1",
     "typescript": "^5.0.0",
-    "use-future": "file:../use-future",
+    "use-future": "^0.0.5",
     "vite-plugin-dts": "^3.9.1",
     "vitest": "^1.6.0"
   },
